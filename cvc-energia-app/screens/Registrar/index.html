@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHECK LIST DE CONDUCTOR</title>
+  <link rel="stylesheet" href="../../css/Registrar.css" />
+</head>
+<body>
+  <div class="registrar-container">
+    <h1>CHECK LIST DE CONDUCTOR</h1>
+
+    <form id="checklistForm">
+      <!-- Datos del conductor -->
+      <fieldset>
+        <legend>Datos del conductor</legend>
+
+        <label>Nombre del conductor:</label>
+        <input type="text" name="conductor" required />
+
+        <label>Número de brevete:</label>
+        <input type="text" name="brevete" required />
+        <label>Placa del vehículo:</label>
+        <input type="text" name="placa" required />
+        <label>Fecha:</label>
+        <input type="date" name="fecha" required />
+        <label>Hora de salida:</label>
+        <input type="time" name="hora_salida" required />
+        <label>Hora de retorno:</label>
+        <input type="time" name="hora_retorno" required />
+        <label>Nombre del jefe inmediato:</label>
+        <input type="text" name="jefe" required />
+      </fieldset>
+
+      <!-- Actividades -->
+      <fieldset>
+        <legend>Actividades a realizar</legend>
+        <label>Lugar de ejecución:</label>
+        <input type="text" name="lugar" required />
+        <label>Detalle de actividad:</label>
+        <textarea name="detalle" rows="2" required></textarea>
+        <label>Fecha:</label>
+        <input type="date" name="fecha_actividad" required />
+        <label>Cumplimiento:</label>
+        <select name="cumplimiento" required>
+          <option value="">Selecciona</option>
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+      </fieldset>
+
+      <!-- Estado físico-emocional -->
+      <fieldset>
+        <legend>Estado físico-emocional del conductor</legend>
+        <label>¿Descansado y en condiciones de conducir?</label>
+        <select name="descanso" required>
+          <option value="">Selecciona</option><option>Sí</option><option>No</option>
+        </select>
+        <label>¿Sin dolencias o enfermedades?</label>
+        <select name="salud" required>
+          <option value="">Selecciona</option><option>Sí</option><option>No</option>
+        </select>
+        <label>¿Medicamentos no afectan conducción?</label>
+        <select name="medicamentos" required>
+          <option value="">Selecciona</option><option>Sí</option><option>No</option>
+        </select>
+        <label>¿Buen estado emocional y concentración?</label>
+        <select name="emocional" required>
+          <option value="">Selecciona</option><option>Sí</option><option>No</option>
+        </select>
+        <label>¿Consciente de la responsabilidad?</label>
+        <select name="responsabilidad" required>
+          <option value="">Selecciona</option><option>Sí</option><option>No</option>
+        </select>
+      </fieldset>
+
+      <!-- Estado general del vehículo -->
+<fieldset>
+  <legend>Estado general del vehículo</legend>
+  <div class="checklist">
+
+    <h4>MOTOR</h4>
+    <label>Nivel de aceite:</label>
+    <select name="motor_aceite" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Nivel de refrigerante:</label>
+    <select name="motor_refrigerante" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Nivel de líquido de freno:</label>
+    <select name="motor_liquido_freno" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Nivel de líquido de batería:</label>
+    <select name="motor_liquido_bateria" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Nivel de hidrolina:</label>
+    <select name="motor_hidrolina" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <h4>PARTE INTERNA</h4>
+    <label>Controles de tablero:</label>
+    <select name="interna_controles_tablero" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Cinturones de seguridad:</label>
+    <select name="interna_cinturones" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Retrovisor:</label>
+    <select name="interna_retrovisor" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Freno de mano:</label>
+    <select name="interna_freno_mano" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <h4>PARTE EXTERNA</h4>
+    <label>Espejos laterales:</label>
+    <select name="externa_espejos_laterales" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Tapa de combustible:</label>
+    <select name="externa_tapa_combustible" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Aros:</label>
+    <select name="externa_aros" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Llantas:</label>
+    <select name="externa_llantas" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Parabrisas:</label>
+    <select name="externa_parabrisas" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Lunas laterales:</label>
+    <select name="externa_lunas_laterales" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Llanta de emergencia:</label>
+    <select name="externa_llanta_emergencia" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <h4>INSPECCIÓN DE DOCUMENTOS</h4>
+    <label>Revisión técnica:</label>
+    <select name="doc_revision_tecnica" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Tarjeta de propiedad:</label>
+    <select name="doc_tarjeta_propiedad" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>SOAT:</label>
+    <select name="doc_soat" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <h4>FUNCIONES</h4>
+    <label>Limpiaparabrisas:</label>
+    <select name="func_limpiaparabrisas" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Claxon:</label>
+    <select name="func_claxon" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Aire acondicionado:</label>
+    <select name="func_aire_acondicionado" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Alarma:</label>
+    <select name="func_alarma" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Cierre centralizado:</label>
+    <select name="func_cierre_centralizado" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Luz de salón:</label>
+    <select name="func_luz_salon" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <h4>EQUIPAMIENTO</h4>
+    <label>Botiquín:</label>
+    <select name="eq_botiquin" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Extintor:</label>
+    <select name="eq_extintor" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Cable de batería:</label>
+    <select name="eq_cable_bateria" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Medidor de aire:</label>
+    <select name="eq_medidor_aire" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Soga de remolque:</label>
+    <select name="eq_soga_remolque" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Linterna:</label>
+    <select name="eq_linterna" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Gata y llave de ruedas:</label>
+    <select name="eq_gata_llave_ruedas" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Jaula antivuelco:</label>
+    <select name="eq_jaula_antivuelco" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>GPS portátil:</label>
+    <select name="eq_gps_portatil" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Neblineros:</label>
+    <select name="eq_neblineros" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Alarma de retroceso:</label>
+    <select name="eq_alarma_retroceso" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Conos de seguridad:</label>
+    <select name="eq_conos_seguridad" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Pala:</label>
+    <select name="eq_pala" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Pico:</label>
+    <select name="eq_pico" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Base y taco de madera:</label>
+    <select name="eq_taco_madera" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Compresora:</label>
+    <select name="eq_compresora" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+    <label>Circulina de peligro:</label>
+    <select name="eq_circulina_peligro" required>
+      <option value="">Selecciona</option><option>OK</option><option>NC</option>
+    </select>
+
+  </div>
+</fieldset>
+
+
+      <!-- Observaciones -->
+      <fieldset>
+        <legend>Observaciones</legend>
+        <label>SALIDA:</label>
+        <textarea name="obs_salida" rows="2" required></textarea>
+        <label>RETORNO:</label>
+        <textarea name="obs_retorno" rows="2" required></textarea>
+      </fieldset>
+
+      <!-- Adjuntar fotos -->
+      <fieldset>
+        <legend>Fotos del vehículo</legend>
+        <label>Subir imágenes de daños o evidencia:</label>
+        <input type="file" id="inputFotos" name="fotos" accept="image/*" multiple required />
+      </fieldset>
+
+      <!-- Firma -->
+      <fieldset>
+        <legend>Firma del conductor</legend>
+        <canvas id="firmaCanvas" width="300" height="150"></canvas>
+        <div class="firma-actions">
+             <button type="button" id="limpiarFirma" class="btn-limpiar">Limpiar firma</button>
+        </div>
+      </fieldset>
+
+      <button type="submit">Guardar registro</button>
+    </form>
+  </div>
+
+  <!-- Barra inferior -->
+  <div class="barra-inferior">
+    <button onclick="location.href='../Mantenimiento/mantenimiento.html'">
+      <img src="../../assets/llave.png" alt="Mantenimiento" />
+      <span>Mantenimiento</span>
+    </button>
+    <button onclick="location.href='ind|.html'">
+      <img src="../../assets/registrar.png" alt="Registrar" />
+      <span>Registrar</span>
+    </button>
+    <button onclick="location.href='../Historial/index.html'">
+      <img src="../../assets/historial.png" alt="Historial" />
+      <span>Historial</span>
+    </button>
+  </div>
+
+  <script src="../../js/Registrar.js"></script>
+</body>
+</html>

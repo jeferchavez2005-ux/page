@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - CVC Energía</title>
+  <link rel="stylesheet" href="../../css/Login.css" />
+</head>
+<body>
+  <!-- Barra negra con logo -->
+  <div class="barra-superior">
+    <img src="../../assets/logo.png" alt="Logo CVC Energía" class="logo-login" />
+  </div>
+
+  <!-- Contenido principal con animación -->
+  <div class="login-container animate-entry">
+    <h1>BIENVENIDO</h1>
+    <h2>CVC ENERGÍA</h2>
+
+    <form id="loginForm">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" placeholder="Ingresa tu correo" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Ingresa tu contraseña" required />
+
+      <button type="submit" class="btn-anim">Ingresar</button>
+      <small id="loginMsg" class="form-msg"></small>
+    </form>
+  </div>
+
+  <script src="../../js/login.js"></script>
+</body>
+</html>

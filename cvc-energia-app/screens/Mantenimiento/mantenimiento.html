@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Mantenimiento</title>
+  <link rel="stylesheet" href="../../css/Mantenimiento.css" />
+</head>
+<body>
+  <div class="mantenimiento-container">
+    <h1>Registro de Mantenimiento</h1>
+
+    <form id="mantenimientoForm">
+      <div class="campo">
+        <label for="placa">Placa del vehículo:</label>
+        <input type="text" id="placa" name="placa" required />
+      </div>
+
+      <div class="campo">
+        <label for="fechaMantenimiento">Fecha de mantenimiento:</label>
+        <input type="date" id="fechaMantenimiento" name="fechaMantenimiento" required />
+      </div>
+
+      <div class="campo">
+        <label for="tipo">Tipo de mantenimiento:</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecciona</option>
+          <option value="Preventivo">Preventivo</option>
+          <option value="Correctivo">Correctivo</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="responsable">Responsable:</label>
+        <input type="text" id="responsable" name="responsable" required />
+      </div>
+
+      <div class="campo">
+        <label for="costo">Costo estimado (S/):</label>
+        <input type="number" id="costo" name="costo" step="0.01" min="0" required />
+      </div>
+
+      <!-- ✅ Firma digital -->
+      <div class="campo">
+        <label>Firma del responsable:</label>
+        <canvas id="mantenimientoFirmaCanvas" width="400" height="150"></canvas>
+        <div class="mantenimiento-firma-actions">
+          <button type="button" id="limpiarMantenimientoFirma" class="btn-limpiar">Limpiar</button>
+        </div>
+      </div>
+
+      <button type="submit">Guardar mantenimiento</button>
+    </form>
+  </div>
+
+  <div id="listaMantenimiento"></div>
+
+  <nav class="barra-inferior">
+    <button class="tab-activa" onclick="location.href='mantenimiento.html'">
+      <img src="../../assets/llave.png" alt="Mantenimiento" />
+      <span>Mantenimiento</span>
+    </button>
+    <button onclick="location.href='../Registrar/index.html'">
+      <img src="../../assets/registrar.png" alt="Registrar" />
+      <span>Registrar</span>
+    </button>
+    <button onclick="location.href='../Historial/index.html'">
+      <img src="../../assets/historial.png" alt="Historial" />
+      <span>Historial</span>
+    </button>
+  </nav>
+
+  <!-- Librería Excel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="../../js/Mantenimiento.js"></script>
+</body>
+</html>
